@@ -26,6 +26,15 @@
             android:value="true" />
 
         <activity
+            android:name=".SplashscreenActivity"
+            android:label="@string/title_activity_splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".SignupActivity"
             android:label="@string/title_activity_signup">
             <intent-filter>

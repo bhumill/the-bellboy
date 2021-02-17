@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/grdnt"
+    android:background="@drawable/bg_splash"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,13 +27,13 @@
                     android:layout_height="20dp"
                     android:src="@drawable/message"
                     android:layout_gravity="center"
-                    app:tint="@color/colorAccent" />
+                    app:tint="@color/toolbarIconColor" />
                 <EditText
                     android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email Address"
-                    android:textColorHint="#000000"
+                    android:textColorHint="#ffffff"
                     android:layout_marginLeft="15dp"
                     android:background="#00000000"
                     android:letterSpacing="0.1"
@@ -57,13 +57,13 @@
                     android:layout_height="20dp"
                     android:src="@drawable/usrusr"
                     android:layout_gravity="center"
-                    app:tint="@color/colorAccent" />
+                    app:tint="@color/toolbarIconColor" />
                 <EditText
                     android:id="@+id/et_usrname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/st_username"
-                    android:textColorHint="#000000"
+                    android:textColorHint="#ffffff"
                     android:layout_marginLeft="15dp"
                     android:background="#00000000"
                     android:letterSpacing="0.1"
@@ -86,13 +86,13 @@
                     android:layout_height="20dp"
                     android:src="@drawable/pswrd"
                     android:layout_gravity="center"
-                    app:tint="@color/colorAccent" />
+                    app:tint="@color/toolbarIconColor" />
                 <EditText
                     android:id="@+id/et_pswrdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/st_password"
-                    android:textColorHint="#000000"
+                    android:textColorHint="#ffffff"
                     android:layout_marginLeft="15dp"
                     android:background="#00000000"
                     android:inputType="textPassword"
@@ -115,20 +115,20 @@
                     android:layout_height="20dp"
                     android:src="@drawable/phonemo"
                     android:layout_gravity="center"
-                    app:tint="@color/colorAccent" />
+                    app:tint="@color/toolbarIconColor" />
                 <EditText
                     android:id="@+id/et_mobphone"
                     android:maxLength="10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Mobile Number"
-                    android:textColorHint="#000000"
+                    android:textColorHint="#ffffff"
                     android:layout_marginLeft="15dp"
                     android:background="#00000000"
                     android:letterSpacing="0.1"
                     android:textSize="16dp"
                     android:inputType="number"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/toolbarIconColor"
                     />
             </LinearLayout>
             <LinearLayout
@@ -149,9 +149,9 @@
             android:id="@+id/tv_sup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            android:background="@color/toolbarIconColor"
             android:text="@string/st_signup"
-            android:textColor="#FFFFFF"
+            android:textColor="#F84153"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_gravity="bottom"
@@ -164,7 +164,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/st_already_acc"
-            android:textColor="@color/product_title"
+            android:textColor="@color/toolbarIconColor"
             android:letterSpacing="0.1"/>
     </LinearLayout>
     <LinearLayout
@@ -176,6 +176,6 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:src="@drawable/logo"
-            app:tint="@color/colorAccent" />
+            app:tint="@color/toolbarIconColor" />
     </LinearLayout>
 </RelativeLayout>
