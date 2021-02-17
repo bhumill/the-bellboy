@@ -2,11 +2,31 @@
     <string name="app_name">thebellboy</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="st_company_name">SHOPPY</string>
+    <string name="st_username">Username</string>
+    <string name="st_password">Password</string>
+    <string name="st_login">Login</string>
+    <string name="st_signup">Signup</string>
+    <string name="st_create_acc">Create Account ? Signup</string>
+    <string name="st_already_acc">Already have an Account ?</string>
+    <string name="st_signup_success">Sign up successful!</string>
+    <string name="st_blank_text">Cannot be left blank</string>
+    <string name="st_invalid_email">Invalid Email</string>
+    <string name="st_invalid_mobile">Must be 10 digits</string>
+    <string name="st_invalid_password">Atleast 4 characters</string>
+    <string name="st_back_pressed">Press back again to exit</string>
+    <string name="st_share_message">Experience the true shopping experience with Shoppy. Checkout amazing product on Shoppy. I highly recommend you to use this app. </string>
+    <string name="go_to_bag">GO TO BAG</string>
+    <string name="add_to_bag">ADD TO BAG</string>
+    <string name="go_to_products">GO TO PRODUCTS</string>
+    <string name="added_to_bag">added to bag!</string>
+    <string name="checkout">Checkout</string>
+    <string name="place_order">PLACE ORDER</string>
+    <string name="exlore_products">HOME</string>
+    <string name="error_payment_option">Please select one payment option!</string>
+    <string name="error_card_input">Please insert 16 digit card number!</string>
+    <string name="app_version">App Version 1.0.0</string>
+    <string name="title_fingerprint">One-touch Sign In</string>
+    <string name="desc_fingerprint">Please place your fingertip on the scanner to verify your identity</string>
+    <string name="note">(Fingerprint sign in makes your app login much faster. Your device should have at least one fingerprint registered in device settings)</string>
 </resources>
