@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/message"
+                    app:tint="@color/toolbarIconColor" />
+
+                <EditText
+                    android:id="@+id/tv_login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="#00000000"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.@_!#$*()"
+                    android:hint="Email"
+                    android:inputType="textFilter"
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#4a5a71"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pswrd"
+                    app:tint="@color/toolbarIconColor" />
+
+                <EditText
+                    android:id="@+id/tv_login_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="#00000000"
+                    android:hint="@string/st_password"
+                    android:inputType="textPassword"
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#4a5a71"></LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarIconColor"
+            android:text="@string/st_login"
+            android:textColor="#F84153"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:padding="16dp"
+            android:layout_marginBottom="50dp"
+            android:letterSpacing="0.2" />
+        <TextView
+            android:id="@+id/tv_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/st_create_acc"
+            android:textColor="@color/toolbarIconColor"
+            android:letterSpacing="0.1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="400dp">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/logo"
+            app:tint="@color/toolbarIconColor" />
+    </LinearLayout>
+</RelativeLayout>
