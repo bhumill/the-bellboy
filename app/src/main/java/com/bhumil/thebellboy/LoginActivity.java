@@ -1,10 +1,12 @@
 package com.bhumil.thebellboy;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -12,6 +14,10 @@ import android.widget.Toast;
 
 import com.bhumil.thebellboy.UtilityClasses.Utility;
 import com.bhumil.thebellboy.UtilityClasses.Validations;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     TextView tvSignUp, tvLogin;
@@ -19,22 +25,9 @@ public class LoginActivity extends AppCompatActivity {
     private  long mBackPressedTime;
     private  int counter = 0;
     private Intent mIntent;
-    public SharedPreferences mSharedPreferences;
-    public String tempUserName = "";
+    private FirebaseAuth mAuth;
 
-    protected void onStart()
-    {
-        super.onStart();
 
-        mSharedPreferences = Utility.getPreference(this);
-
-        if (!(mSharedPreferences.getString(Utility.USEREMAIL, "") == null && mSharedPreferences.getString(Utility.USERPASSWORD, "") == null))
-        {
-            tvEmail.setText(mSharedPreferences.getString(Utility.USEREMAIL, ""));
-            tvPassword.setText(mSharedPreferences.getString(Utility.USERPASSWORD, ""));
-            tempUserName= mSharedPreferences.getString(Utility.USERNAME, "");
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         tvLogin = (TextView) findViewById(R.id.tv_login);
         tvEmail = (EditText) findViewById(R.id.tv_login_email);
         tvPassword = (EditText) findViewById(R.id.tv_login_pass);
+        mAuth = FirebaseAuth.getInstance();
 
         tvSignUp.setOnClickListener(new View.OnClickListener()
         {
@@ -52,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent signupIntent = new Intent(LoginActivity.this, SignupActivity.class);
+                Intent signupIntent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(signupIntent);
             }
         });
@@ -62,51 +56,38 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                String Username;
-                if(tempUserName.isEmpty())
-                {
-                    Username = "Demo user";
-                }
-                else
-                {
-                    Username = tempUserName;
-                }
 
-                String Email = tvEmail.getText().toString();
-                String Password = tvPassword.getText().toString();
-                if(Email == "Raj" && Password == "Raj")
+                String Email = tvEmail.getText().toString().trim();
+                String Password = tvPassword.getText().toString().trim();
+                if(TextUtils.isEmpty(Email))
                 {
-                    SharedPreferences.Editor editor = mSharedPreferences.edit();
-                    editor.putString(Utility.USEREMAIL, Email.trim());
-                    editor.putString(Utility.USERNAME, "Raj");
-                    editor.putString(Utility.USERPASSWORD, Password.trim());
-                    editor.commit();
-                    Intent productIntent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(productIntent);
+                    tvEmail.setError("Email is required");
+                    return;
                 }
-                else
+                if(TextUtils.isEmpty(Password))
                 {
-                    Validations userData = new Validations();
-                    int validated = userData.ValidateLogin(Email.trim(), Password.trim());
-                    if(validated == Validations.VALID_DATA)
-                    {
-                        SharedPreferences.Editor editor = mSharedPreferences.edit();
-                        editor.putString(Utility.USEREMAIL, Email.trim());
-                        editor.putString(Utility.USERNAME, Username);
-                        editor.putString(Utility.USERPASSWORD, Password.trim());
-                        editor.commit();
-                        Intent productIntent = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(productIntent);
-                    }
-                    else if(validated == Validations.INVALID_EMAIL)
-                    {
-                        tvEmail.setError("Invalid Email");
-                    }
-                    else if(validated == Validations.INVALID_PASSWORD)
-                    {
-                        tvPassword.setError("Atleast 4 characters");
-                    }
+                    tvPassword.setError("Password is required");
+                    return;
                 }
+                if(Password.length() < 6)
+                {
+                    tvPassword.setError("Password must be 6 characters atleast");
+                    return;
+                }
+                mAuth.signInWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful())
+                        {
+                            Toast.makeText(LoginActivity.this,"Log In Successful",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        }
+                        else
+                        {
+                            Toast.makeText(LoginActivity.this,"Error! " + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
     }
