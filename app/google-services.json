@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "788665914773",
+    "project_id": "bell-boy-69b00",
+    "storage_bucket": "bell-boy-69b00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788665914773:android:04f2d73204e08aae9c129c",
+        "android_client_info": {
+          "package_name": "com.bhumil.thebellboy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788665914773-v1moq9bqflid4r35uh6cvh431f596ngt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAwV0C6lzWj-TkSsvo2E1eYvCZ5HgykVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788665914773-v1moq9bqflid4r35uh6cvh431f596ngt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
