@@ -25,7 +25,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/message"
+                    app:srcCompat="@drawable/message"
                     android:layout_gravity="center"
                     app:tint="@color/toolbarIconColor" />
                 <EditText
@@ -55,7 +55,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/usrusr"
+                    app:srcCompat="@drawable/usrusr"
                     android:layout_gravity="center"
                     app:tint="@color/toolbarIconColor" />
                 <EditText
@@ -84,7 +84,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/pswrd"
+                    app:srcCompat="@drawable/pswrd"
                     android:layout_gravity="center"
                     app:tint="@color/toolbarIconColor" />
                 <EditText
@@ -113,7 +113,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/phonemo"
+                    app:srcCompat="@drawable/phonemo"
                     android:layout_gravity="center"
                     app:tint="@color/toolbarIconColor" />
                 <EditText
@@ -175,7 +175,7 @@
         <ImageView
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:src="@drawable/logo"
+            app:srcCompat="@drawable/logo"
             app:tint="@color/toolbarIconColor" />
     </LinearLayout>
 </RelativeLayout>
