@@ -18,7 +18,7 @@
     <string name="st_share_message">Experience the true shopping experience with Shoppy. Checkout amazing product on Shoppy. I highly recommend you to use this app. </string>
     <string name="go_to_bag">GO TO BAG</string>
     <string name="add_to_bag">ADD TO BAG</string>
-    <string name="go_to_products">GO TO PRODUCTS</string>
+    <string name="go_to_products">GO TO HOTELS</string>
     <string name="added_to_bag">added to bag!</string>
     <string name="checkout">Checkout</string>
     <string name="place_order">PLACE ORDER</string>
@@ -36,4 +36,5 @@
     -->
     <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_splashscreen">SplashscreenActivity</string>
+    <string name="title_activity_hotels">HotelsActivity</string>
 </resources>

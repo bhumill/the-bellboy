@@ -28,7 +28,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/message"
+                    app:srcCompat="@drawable/message"
                     app:tint="@color/toolbarIconColor" />
 
                 <EditText
@@ -61,7 +61,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/pswrd"
+                    app:srcCompat="@drawable/pswrd"
                     app:tint="@color/toolbarIconColor" />
 
                 <EditText
@@ -122,7 +122,7 @@
         <ImageView
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:src="@drawable/logo"
+            app:srcCompat="@drawable/logo"
             app:tint="@color/toolbarIconColor" />
     </LinearLayout>
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.projects.bhumil.shoppy.UtilityClasses;
+package com.bhumil.thebellboy.UtilityClasses;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
