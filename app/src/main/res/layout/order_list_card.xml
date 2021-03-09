@@ -46,7 +46,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total"
+                        android:text="Rent"
                         android:layout_marginRight="34dp"/>
                     <TextView
                         android:id="@+id/item_product_price"
@@ -57,6 +57,7 @@
                         android:text="$30.25"
                         android:textSize="15sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -64,17 +65,56 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Quantity"
+                        android:text="Check-In Date"
                         android:layout_marginRight="16dp"/>
+                    <DatePicker android:id="@+id/datePicker1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Days of stay"
+                        android:layout_marginRight="16dp"/>
+                    <EditText
                         android:id="@+id/item_product_qty"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="1dp"
                         android:letterSpacing="0.1"
-                        android:text=""
+
                         android:textSize="15sp" />
+
+
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No of Guest"
+                        android:layout_marginRight="16dp"/>
+                    <EditText
+                        android:id="@+id/item_product_qty1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:letterSpacing="0.1"
+
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+
 
 
             </LinearLayout>

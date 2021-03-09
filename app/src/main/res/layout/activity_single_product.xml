@@ -110,6 +110,18 @@
                     android:textSize="15sp"
                     android:text="All faciliteis included"
                     android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/tv_product_detail1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_marginTop="8dp"
+                    android:paddingBottom="@dimen/songs_count_padding_bottom"
+                    android:paddingLeft="@dimen/album_title_padding"
+                    android:paddingRight="@dimen/album_title_padding"
+                    android:textSize="15sp"
+                    android:text="Check-In time 11am"
+                    android:visibility="visible"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
