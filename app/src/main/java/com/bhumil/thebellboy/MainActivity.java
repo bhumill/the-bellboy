@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         iDrawerItems.add((IDrawerItem) new PrimaryDrawerItem().withName("Home").withIcon(R.drawable.ic_home_black_24dp));
         iDrawerItems.add((IDrawerItem) new PrimaryDrawerItem().withName("Hotels").withIcon(R.drawable.ic_our_products));
         iDrawerItems.add((IDrawerItem) new PrimaryDrawerItem().withName("Cart").withIcon(R.drawable.ic_cart));
+        iDrawerItems.add((IDrawerItem) new PrimaryDrawerItem().withName("My Order").withIcon(R.drawable.ic_cart));
         iDrawerItems.add((IDrawerItem) new PrimaryDrawerItem().withName("Contact Us").withIcon(R.drawable.ic_contact_us));
         iDrawerItems.add((IDrawerItem) new PrimaryDrawerItem().withName("Share").withIcon(R.drawable.ic_share_black_24dp));
 
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     @Override
                     public boolean onItemClick(View view, int position, com.mikepenz.materialdrawer.model.interfaces.IDrawerItem drawerItem) {
-                        if(position == 4)
+                        if(position == 5)
                         {
                             Uri contactUri = Uri.parse("https://www.instagram.com/bhumilll/");
                             Intent contactIntent = new Intent(Intent.ACTION_VIEW, contactUri);
@@ -117,7 +118,12 @@ public class MainActivity extends AppCompatActivity {
                             Intent productsIntent = new Intent(MainActivity.this, OrderListActivity.class);
                             startActivity(productsIntent);
                         }
-                        else if(position == 5)
+                        else if(position == 4)
+                        {
+                            Intent productsIntent = new Intent(MainActivity.this, PlacedOrderActivity.class);
+                            startActivity(productsIntent);
+                        }
+                        else if(position == 6)
                         {
                             Intent i = new Intent(android.content.Intent.ACTION_SEND);
                             i.setType("text/plain");
