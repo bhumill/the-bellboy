@@ -12,6 +12,7 @@ User can see the rating of the hotels and can see whether hotels' package includ
 # Technologies Used
 
 Language : Java
+
 IDE : Android Studio
 
 # Database used
